@@ -1,0 +1,17 @@
+capability: pdf-extract
+chosen_tier: pay
+provider: google-documentai
+cost: "$0.03"
+quality: 0.95
+context: "12-page contract with tables"
+alternatives_tried:
+  - tier: gen
+    provider: llm-reasoning
+    quality: 0.60
+    reason_rejected: "missed table alignment, wrong column mapping"
+  - tier: use
+    provider: pdftotext
+    quality: 0.50
+    reason_rejected: "lost all table structure"
+strategy: balanced
+recommendation: "For PDFs with tables, skip GEN and USE — pay for DocumentAI. For simple text PDFs, GEN is fine."

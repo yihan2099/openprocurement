@@ -1,0 +1,22 @@
+# OpenProcurement Decision Record Schema
+#
+# Submit a PR adding a .yml file to this directory.
+# Name your file: {capability}-{short-description}.yml
+# Example: pdf-extract-invoice-tables.yml
+
+# Required fields
+capability: string       # e.g. pdf-extract, email-lookup, web-scrape
+chosen_tier: string      # cache | use | gen | pay | delegate
+provider: string         # what tool/service was used (e.g. "pdftotext", "google-documentai")
+cost: string             # e.g. "$0", "$0.03"
+quality: number          # 0.0 to 1.0, your assessment of result quality
+
+# Optional fields
+context: string          # brief description of the task (e.g. "12-page contract with tables")
+alternatives_tried:      # list of other tiers/providers attempted
+  - tier: string
+    provider: string
+    quality: number
+    reason_rejected: string
+strategy: string         # cheapest | fastest | best_quality | balanced
+recommendation: string   # one-line takeaway for others (e.g. "GEN is good enough for simple PDFs")

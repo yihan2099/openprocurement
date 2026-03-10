@@ -1,10 +1,10 @@
-# use-gen-pay
+# openprocurement
 
-The procurement layer for AI agents.
+The open procurement layer for AI agents.
 
 ## What is this
 
-A single markdown file that teaches any AI agent a five-tier decision protocol for fulfilling capabilities:
+A decision protocol that teaches any AI agent how to fulfill capabilities at the lowest cost, powered by community intelligence.
 
 ```
 CACHE → USE → GEN → PAY → DELEGATE
@@ -14,9 +14,11 @@ instant  fast  slow    fast   async
 
 The rule: never escalate to a higher-cost tier when a lower one can do the job.
 
+**Community intelligence**: every tier is informed by shared decision records from other users. Before deciding, check what others have tried and what worked.
+
 ## Usage
 
-Copy `use-gen-pay.skill.md` into your agent's context:
+Copy `openprocurement.skill.md` into your agent's context:
 
 - **Claude Code**: Add to your `CLAUDE.md` or reference as a skill
 - **System prompt**: Include in your agent's system prompt
@@ -33,6 +35,18 @@ No install. No dependencies. No SDK.
 | **GEN** | tokens | LLM generates it (costs tokens + time) |
 | **PAY** | $$ | Paid API via x402 |
 | **DELEGATE** | $$+ | Another agent or human handles it |
+
+## Community Decisions
+
+The `decisions/` directory contains community-submitted decision records. These are real-world results from agents and users who have run the cascade.
+
+**To contribute:** submit a PR adding a `.yml` file to `decisions/` using the schema in `decisions/_schema.yml`.
+
+**How it helps:**
+- USE tier: see which free tools actually work best
+- GEN tier: know when generating is good enough or don't bother
+- PAY tier: find which providers give best value
+- DELEGATE tier: learn when delegation was necessary
 
 ## Example
 
