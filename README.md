@@ -16,15 +16,28 @@ The rule: never escalate to a higher-cost tier when a lower one can do the job.
 
 **Community intelligence**: every tier is informed by shared decision records from other users. Before deciding, check what others have tried and what worked.
 
-## Usage
+## Install as Claude Code Plugin
 
-Copy `openprocurement.skill.md` into your agent's context:
+```
+/plugin marketplace add yihan2099/use-gen-pay
+/plugin install openprocurement@openprocurement
+```
 
-- **Claude Code**: Add to your `CLAUDE.md` or reference as a skill
-- **System prompt**: Include in your agent's system prompt
+Then use:
+```
+/openprocurement:procurement
+```
+
+Claude will automatically apply the five-tier decision protocol when fulfilling capabilities.
+
+## Alternative Usage
+
+You can also use the skill directly without the plugin system:
+
+- **System prompt**: Include `skills/procurement/SKILL.md` in your agent's system prompt
 - **LangChain/CrewAI**: Load as part of agent instructions
 
-No install. No dependencies. No SDK.
+No dependencies. No SDK.
 
 ## The Five Tiers
 
