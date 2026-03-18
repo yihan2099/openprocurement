@@ -1,0 +1,10 @@
+{
+  "name": "openprocurement",
+  "description": "Agent procurement skill — five-tier decision protocol (Cache → Use → Gen → Pay → Delegate) for fulfilling capabilities at minimum cost",
+  "version": "1.0.0",
+  "author": {
+    "name": "yihan2099"
+  },
+  "repository": "https://github.com/yihan2099/use-gen-pay",
+  "license": "MIT"
+}

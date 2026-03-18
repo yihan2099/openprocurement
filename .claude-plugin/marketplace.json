@@ -1,0 +1,13 @@
+{
+  "name": "openprocurement",
+  "owner": {
+    "name": "yihan2099"
+  },
+  "plugins": [
+    {
+      "name": "openprocurement",
+      "source": "./",
+      "description": "Agent procurement skill — five-tier decision protocol (Cache → Use → Gen → Pay → Delegate) for fulfilling capabilities at minimum cost"
+    }
+  ]
+}

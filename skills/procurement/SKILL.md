@@ -1,3 +1,8 @@
+---
+name: procurement
+description: Five-tier procurement decision protocol (Cache → Use → Gen → Pay → Delegate) for fulfilling any capability at minimum cost. Includes budget tracking, caching, and community decision records.
+---
+
 # OpenProcurement — Agent Procurement Skill
 
 You have access to this skill to decide how to fulfill any capability. Before performing any capability listed below, you MUST follow the five-tier decision protocol.
